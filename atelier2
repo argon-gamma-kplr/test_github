@@ -1,0 +1,122 @@
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ cd ..
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git (julien)
+$ mkdir atelier2
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git (julien)
+$ cd atelier2
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ touch file1.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ ls
+file1.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ echo "master branch" > file1.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git add -A
+warning: adding embedded git repository: atelier1
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> atelier1
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached atelier1
+hint:
+hint: See "git help submodule" for more information.
+warning: in the working copy of 'atelier2/file1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: test_github
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git commit -m 'modif de l'atelier 2'
+>
+> git log
+> ^Ce
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git log
+commit b0d665237aee2a8700458d8aa4bdd1713bdf90a5 (HEAD -> julien)
+Author: julien <argon.gamma@training.kplr.fr>
+Date:   Tue May 9 10:08:32 2023 +0200
+
+    first commit julien
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git add .
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git commit -m 'atelier 2 permeir commit'
+[julien 7cfd1b5] atelier 2 permeir commit
+ 3 files changed, 3 insertions(+)
+ create mode 160000 atelier1
+ create mode 100644 atelier2/file1.txt
+ create mode 160000 test_github
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ echo "dev branch" > file2.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ git add .
+warning: in the working copy of 'atelier2/file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ git commit -m 'branche dev commit'
+[dev 8a9305f] branche dev commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 atelier2/file2.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ goit status
+bash: goit: command not found
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ git log
+commit 8a9305f68f95a1574898a4c3e88ecacee368be69 (HEAD -> dev)
+Author: argon-gamma-kplr <130389650+argon-gamma-kplr@users.noreply.github.com>
+Date:   Tue May 9 14:50:53 2023 +0200
+
+    branche dev commit
+
+commit 7cfd1b555ce59ec9a2c2bfd23e1247fd1d1a1680 (julien)
+Author: argon-gamma-kplr <130389650+argon-gamma-kplr@users.noreply.github.com>
+Date:   Tue May 9 14:48:03 2023 +0200
+
+    atelier 2 permeir commit
+
+commit b0d665237aee2a8700458d8aa4bdd1713bdf90a5
+Author: julien <argon.gamma@training.kplr.fr>
+Date:   Tue May 9 10:08:32 2023 +0200
+
+    first commit julien
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ git checkout julien
+Switched to branch 'julien'
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (julien)
+$ git checkout dev
+Switched to branch 'dev'
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$ ^C
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier2 (dev)
+$
