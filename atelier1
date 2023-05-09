@@ -1,0 +1,28 @@
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ git add .
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ git commit -m 'voila le fichier file'
+[master (root-commit) bfd67e8] voila le fichier file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ ls
+file.txt
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ git log
+commit bfd67e807c7b2ad839a8024e047f6edb80536e29 (HEAD -> master)
+Author: argon-gamma-kplr <130389650+argon-gamma-kplr@users.noreply.github.com>
+Date:   Tue May 9 14:31:53 2023 +0200
+
+    voila le fichier file
+
+julie@LAPTOP-TK3HVTVE MINGW64 ~/Desktop/test_git/atelier1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
